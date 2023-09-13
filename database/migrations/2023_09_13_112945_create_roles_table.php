@@ -11,22 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('matriculas', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('curso_id');
-            $table->foreign('curso_id')->references('id')->on('cursos');
-            $table->unsignedBigInteger('alumno_id');
-            $table->foreign('alumno_id')->references('id')->on('alumnos');
-            $table->char('asistencia', 1)->nullable();
+            $table->string('rol')->unique();
+            $table->date('fecha_creacion');
+            $table->date('fecha_edicion')->nullable();
+            $table->date('usuario_creacion')->nullable();
+            $table->date('usuario_edicion')->nullable();
+            $table->char('estado', 1)->default(1);
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('matriculas');
+        Schema::dropIfExists('roles');
     }
 };
