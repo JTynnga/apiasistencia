@@ -17,11 +17,7 @@ class RoleFactory extends Factory
     public function definition(): array
     {
         return [
-
-            'nombre' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'telefono' => fake()->phoneNumber(),
-            'estado' => 1,
+            //
         ];
     }
 }

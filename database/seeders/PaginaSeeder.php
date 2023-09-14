@@ -2,20 +2,17 @@
 
 namespace Database\Seeders;
 
-namespace Database\Seeders;
-
-use App\Models\Docente;
+use App\Models\Pagina;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DocenteSeeder extends Seeder
+class PaginaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        //
-        Docente::factory(10)->create();
+        Pagina::factory(10)->create();
     }
 }

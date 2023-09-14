@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('apellido_mat')->nullable();
             $table->date('fecha_creacion');
             $table->date('fecha_edicion')->nullable();
-            $table->date('usuario_creacion')->nullable();
-            $table->date('usuario_edicion')->nullable();
+            $table->string('usuario_creacion')->nullable();
+            $table->string('usuario_edicion')->nullable();
             $table->char('estado', 1)->default(1);
             $table->timestamps();
         });

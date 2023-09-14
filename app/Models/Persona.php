@@ -6,14 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Matricula extends Model
+class Persona extends Model
 {
     use HasFactory;
-
-    protected $table = 'matriculas';
-
-    public function curso(): BelongsTo
-    {
-        return $this->belongsTo(curso::class, 'curso_id');
-    }
 }

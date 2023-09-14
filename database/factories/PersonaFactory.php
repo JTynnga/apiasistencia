@@ -23,11 +23,9 @@ class PersonaFactory extends Factory
             'apellido_mat' => fake()->lastName(),
             'fecha_creacion' => fake()->date(),
             'fecha_edicion' => fake()->date(),
-            'usuario_creacion' => fake()->lastName(),
-            'usuario_edicion' => fake()->lastName(),
+            'usuario_creacion' => fake()->email(),
+            'usuario_edicion' => fake()->email(),
             'estado' => 1,
-            //            'email' => fake()->unique()->safeEmail(),
-            //            'telefono' => fake()->phoneNumber(),
         ];
     }
 }

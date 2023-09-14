@@ -6,11 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Docente extends Model
+class Bitacora extends Model
 {
     use HasFactory;
-    /*  public function docente(): HasOne
-    {
-        return $this->hasOne(Docente::class);
-    }*/
 }

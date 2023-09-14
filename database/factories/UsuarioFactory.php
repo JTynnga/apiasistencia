@@ -17,15 +17,16 @@ class UsuarioFactory extends Factory
     public function definition(): array
     {
         return [
-            'nombre1' => fake()->firstName(),
-            'nombre2' => fake()->firstName(),
-            'apellido_pat' => fake()->lastName(),
-            'apellido_mat' => fake()->lastName(),
-            'fecha_creacion' => fake()->date(),
-            'fecha_edicion' => fake()->date(),
-            'usuario_creacion' => fake()->lastName(),
-            'usuario_edicion' => fake()->lastName(),
+            'fecha' => fake()->date(),
+            'id_persona' => fake()->randomElement($array = array(1, 2, 3, 4, 5, 6, 7, 9, 10)),
+            'clave' => fake()->randomElement($array = array('funval', 'admin', '1234567')),
+            'usuario' => fake()->unique()->safeEmail(),
             'estado' => 1,
+            'id_rol' => fake()->randomElement($array = array(1, 2, 3)),
+            'fecha_creacion' => fake()->date(),
+            'fecha_edicion' => null,
+            'usuario_creacion' => fake()->safeEmail(),
+            'usuario_edicion' => fake()->safeEmail(),
         ];
     }
 }
